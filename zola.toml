@@ -1,0 +1,70 @@
+# The URL the site will be built for
+base_url = "https://forthevim.org"
+title = "for the (neo)vim"
+author = "DrJackyl"
+
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+# Build the atom feed (default, RSS not needed)
+generate_feeds = true
+
+# Theme: radion (https://www.getzola.org/themes/radion/)
+theme = "radion"
+
+# Required for radion theme as per documentation
+taxonomies = [
+    { name = "categories", feed = true },
+    { name = "tags", feed = true },
+]
+
+[search]
+index_format = "elasticlunr_json"
+
+[markdown]
+
+[markdown.highlighting]
+theme = "catppuccin-mocha"
+# The documentation states for highlighting, that a "dark_theme" and a "light_theme" can be defined. Though, the
+# background of the code block remains dark, regardless of light-/dark-mode. Hence, I left, the config I had previously
+# or is from init.
+#
+# https://github.com/micahkepe/radion?tab=readme-ov-file#code-snippets
+#
+# style = "class"
+# dark_theme = "catppuccin-mocha"
+# light_theme = "catppuccin-latte"
+
+[extra]
+radion_title = "for the (neo)vim"
+comments = false
+
+# Optionals
+radion_menu = [
+    { url = "$BASE_URL", name = "Home" },
+    { url = "$BASE_URL/about", name = "About" },
+    # { url = "$BASE_URL/categories", name = "Categories" },
+    # { url = "$BASE_URL/tags", name = "Tags" }
+]
+
+theme = "toggle"
+codeblock = true
+enable_search = true
+github = "https://github.com/drjackyl"
+revision_history = true
+blog_github_repo_url = "https://github.com/DrJackyl-s-Pages/forthevim.org"
+
+# Custom fonts from fontsource don't seem to work.
+# font_cdn = "fontsource"
+# font_name = "Fira Code"
+# font_weights = ["main"]
+
+# I like Fira Code,  but inline code and code blocks use a different one. Hence I prefer to not use a custom font.
+# font_cdn = "googlefont"
+# font_name = "Fira Code"
+# font_weights = [300, 400, 500, 700]
+# font_display = "swap"
